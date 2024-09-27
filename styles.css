@@ -98,9 +98,8 @@ header {
         }
       }
 
-      /* CSS for at tilføje mellemrum mellem "Languages" og "Tools" */
       ul + h2 {
-        margin-top: 20px; /* Justér denne værdi for at øge eller mindske mellemrummet */
+        margin-top: 20px;
       }
     }
   }
