@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Sara Meisner - Portfolio</title>
 </head>
@@ -16,19 +15,27 @@
     <header>
         <p>SARA MEISNER</p>
         <h1>PORTFOLIO</h1>
-
     </header>
-    <hr class="divider">
 
     <main>
-        <div class="image-container">
-            <img src="indexudenbg.webp" alt="Self portrait">
+        <section class="about">
+            <p>My name is Sara Meisner, and I am a Multimedia Design student at Københavns Erhvervsakademi, specializing
+                in frontend development. My passion for frontend is driven by my curiosity and eagerness to continuously
+                learn and grow. Outside of my studies, I have a strong focus on design and creative work. In my free
+                time, I assist upcoming businesses and artists by contributing my skills in photography, video editing,
+                and brand identity. I love combining my technical knowledge with my creative talents to create visual
+                solutions that engage and inspire.</p>
+        </section>
 
-        </div>
+        <hr class="divider">
 
-        <div class="skills-container">
-            <div class="skills-column">
-                <div class="skills-section">
+        <section class="skills-layout">
+            <figure class="image-container">
+                <img src="indexudenbg.webp" alt="Self portrait">
+            </figure>
+
+            <div class="skills-details">
+                <article class="skills-section">
                     <h2>Technical skills</h2>
                     <ul>
                         <li>Frontend web development</li>
@@ -47,11 +54,9 @@
                         <li>User testing</li>
                         <li>Project management</li>
                     </ul>
-                </div>
-            </div>
+                </article>
 
-            <div class="skills-column">
-                <div class="skills-section">
+                <article class="skills-section">
                     <h2>Languages</h2>
                     <ul>
                         <li>HTML</li>
@@ -59,9 +64,6 @@
                         <li>JavaScript</li>
                         <li>React</li>
                     </ul>
-                </div>
-
-                <div class="skills-section">
                     <h2>Tools</h2>
                     <ul>
                         <li>VSCode</li>
@@ -73,13 +75,14 @@
                         <li>Microsoft Office</li>
                         <li>Trello</li>
                     </ul>
-                </div>
+                </article>
             </div>
-        </div>
+        </section>
     </main>
-    <hr class="divider">
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Sara Meisner</p>
+    </footer>
 </body>
 
 </html>
