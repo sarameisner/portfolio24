@@ -57,3 +57,8 @@ document.querySelectorAll(".scroll-wrapper").forEach((wrapper) => {
     });
   });
 });
+
+// Vent indtil hele siden er indlæst
+window.addEventListener("load", function () {
+  document.body.classList.add("loaded");
+});
