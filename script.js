@@ -36,3 +36,24 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+
+// Håndter scroll-knapperne
+document.querySelectorAll(".scroll-wrapper").forEach((wrapper) => {
+  const leftBtn = wrapper.querySelector(".left-btn");
+  const rightBtn = wrapper.querySelector(".right-btn");
+  const scrollContainer = wrapper.querySelector(".scroll-container");
+
+  leftBtn.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+      left: -300, // Scroll til venstre (justér denne værdi efter behov)
+      behavior: "smooth",
+    });
+  });
+
+  rightBtn.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+      left: 300, // Scroll til højre (justér denne værdi efter behov)
+      behavior: "smooth",
+    });
+  });
+});
