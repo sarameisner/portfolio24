@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #2b2a27;
 }
 
 header {
@@ -90,6 +91,8 @@ header {
         list-style: none;
         padding: 0;
         margin: 0;
+        color: #2b2a27;
+        font-size: 1rem;
 
         li {
           padding: 2px 0;
@@ -108,6 +111,21 @@ header {
   margin: 20px 0;
 }
 
+.projects-container p,
+.projects-container ul,
+.projects-container li {
+  font-size: 1rem;
+  color: #2b2a27;
+}
+
+.projects-container p {
+  text-align: center;
+  margin: 40px 0;
+  line-height: 1.5;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -222,14 +240,70 @@ h3 {
   cursor: pointer;
 }
 
+.contact-section {
+  text-align: center;
+  padding: 10px 10px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #2b2a27;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-details a {
+  text-decoration: none;
+  color: #2b2a27;
+  font-size: 1rem;
+  position: relative;
+}
+
+.contact-details a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background-color: #2b2a27;
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s ease;
+}
+
+.contact-details a:hover::after {
+  width: 100%;
+}
+
+footer {
+  padding: 20px 30px;
+  text-align: center;
+  color: #2b2a27;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .skills-layout {
     grid-template-columns: 1fr;
+    justify-items: center;
+
+    .image-container {
+      display: none;
+    }
 
     .skills-details {
       grid-template-columns: 1fr;
       padding-left: 0;
       border-left: none;
+      justify-items: center;
+      text-align: center;
     }
   }
 
