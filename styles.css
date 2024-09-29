@@ -339,6 +339,19 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    justify-content: center;
+    position: relative;
+  }
+
+  header p {
+    display: none;
+  }
+
+  header h1 {
+    text-align: center;
+    margin-top: 0;
+  }
   .skills-layout {
     grid-template-columns: 1fr;
     justify-items: center;
