@@ -1,4 +1,3 @@
-/* Generelle stilarter */
 * {
   margin: 0;
   padding: 0;
@@ -17,20 +16,20 @@ header {
   width: 100%;
   max-width: 1200px;
   padding: 20px;
-  display: flex; /* Brug flex til at kontrollere positioneringen */
-  justify-content: space-between; /* Sørg for at placere SARA MEISNER til venstre og PORTFOLIO til højre */
-  align-items: center; /* Juster elementerne lodret i midten */
-  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #8b8b8b;
 
   h1 {
     font-size: 3rem;
     margin-top: 10px;
-    text-align: right; /* Juster teksten til højre */
+    text-align: right;
   }
 
   p {
     font-weight: bold;
-    text-align: left; /* Juster teksten til venstre */
+    text-align: left;
     margin-top: 50px;
   }
 }
@@ -45,7 +44,7 @@ header {
 
 .divider {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #8b8b8b;
   margin: 20px 0;
   width: 100%;
   max-width: 1200px;
@@ -58,7 +57,7 @@ header {
   width: 100%;
   padding: 20px 0;
   gap: 20px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #8b8b8b;
 
   .image-container {
     display: flex;
@@ -77,7 +76,7 @@ header {
     grid-template-rows: auto auto;
     gap: 10px;
     padding-left: 2rem;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid #8b8b8b;
 
     .skills-section {
       padding: 10px;
@@ -105,6 +104,64 @@ header {
   }
 }
 
+.projects-container {
+  margin: 20px 0;
+}
+
+h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.scroll-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px;
+  scroll-behavior: smooth;
+  max-width: 800px; /* Begrænser containerens bredde til at vise kun tre projekter ad gangen */
+  margin: 0 auto; /* Centrerer containeren på midten af siden */
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+.project-card {
+  flex: 0 0 calc((800px - 40px) / 3); /* Justér bredden af kortene til at passe til tre i containeren */
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Sikrer, at billederne ikke flyder udenfor kortet */
+}
+
+.project-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Gør, at billedet fylder hele kortet uden at blive forvrænget */
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover img {
+  transform: scale(1.1); /* Skaber en let zoom-effekt, når du hover over kortet */
+}
+
 /* Responsivt design */
 @media (max-width: 768px) {
   .skills-layout {
@@ -115,5 +172,14 @@ header {
       padding-left: 0;
       border-left: none;
     }
+  }
+
+  .scroll-container {
+    max-width: 100%; /* Tillader containeren at fylde hele bredden på mindre skærme */
+  }
+
+  .project-card {
+    flex: 0 0 calc((100% - 40px) / 2); /* Viser kun to projekter ad gangen på mindre skærme */
+    height: 150px;
   }
 }
