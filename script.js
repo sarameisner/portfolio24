@@ -61,5 +61,5 @@ document.querySelectorAll(".scroll-wrapper").forEach((wrapper) => {
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.body.classList.add("loaded");
-  }, 1200);
+  }, 1500);
 });
